@@ -1,0 +1,16 @@
+-----------------------------------------
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+-----------------------------------------
+ENTITY comp_add IS
+  PORT (a, b: IN INTEGER RANGE 0 TO 7;
+  comp: OUT STD_LOGIC;
+  sum: OUT INTEGER RANGE 0 TO 15);
+END ENTITY;
+-----------------------------------------
+ARCHITECTURE circuit OF comp_add IS
+  BEGIN
+  comp <= '1' WHEN a>b ELSE '0';
+  sum <= a + b;
+END ARCHITECTURE;
+-----------------------------------------
