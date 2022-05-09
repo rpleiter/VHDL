@@ -1,0 +1,10 @@
+ENTITY full_adder IS
+  PORT (a, b, cin: IN BIT;
+        sum, cout: OUT BIT);
+END ENTITY
+
+ARCHITECTURE dataflow of full_adder IS
+BEGIN
+  sum <= a XOR b XOR cin;
+  cout <= (a AND b) OR (a AND cin) OR (b AND cin);
+END dataflow;
